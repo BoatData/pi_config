@@ -12,7 +12,11 @@ applications installed are OpenCPN and SignalK and eventually an API for system
 configuration.
 
 This project assumes a Raspberry Pi 3 although earlier versions may also work
-to some degree however thing will run a lot better with the 1GB RAM of the Pi 3.
+to some degree however things will run a lot better with the 1GB RAM of the Pi 3.
+
+Also we hope to collect information and designs for hardware projects to
+interface with the Pi, everything you will need to turn a Raspberry Pi into a
+super useful tool for your boat network all in one place.
 
 ### OpenCPN
 
@@ -31,7 +35,10 @@ SignalK website at http://signalk.org
 ### NodeJS API
 Configuring the applications that run on the Pi can be tedious and error prone.
 The aim of this project is to provide an API for applications to configure the
-elements of the Pi related to marine data.
+elements of the Pi related to marine data.  In particular we want to be able
+to configure programs to do things based on the GPIO pins and also control
+signal values on the GPIO pins in addition to configuring the Pi as an NMEA
+multiplexer.
 
 ### See Also
 
@@ -50,7 +57,7 @@ run OpenCPN you will need the version with the desktop.  Unzip the downloaded
 zip file and follow the Installation
 instructions for your operating system to burn the image to an SD card.
 
-### mount the pi image on a folder
+### mount the pi image on a folder (optional)
 
 If you want to modify the Pi image before you boot the Pi and you are running
 linux or some other flavour of Unix (and you know what you
@@ -72,7 +79,7 @@ a HDMI screen, keyboard and mouse then it simply a case of clicking on the netwo
 icon in the top panel and configure through the GUI interface.
 
 If you need to configure wifi access manually then the following programs will
-be useful - iwlist and wpa_supplicant.
+be useful - iwlist and wpa_supplicant, e.g.
 
 ```
 iwlist wlan0 scan
