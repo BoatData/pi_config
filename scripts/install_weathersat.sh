@@ -19,3 +19,4 @@ wxtoimgrcconf
 cd ${base}
 mkdir -p ~/weather/predict
 cp pi_config/sources/weathersat_*.sh !$
+chmod +x !$/*.sh
