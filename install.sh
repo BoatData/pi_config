@@ -41,3 +41,9 @@ bash pi_config/scripts/install_signalk.sh
 bash pi_config/install_vnc.sh
 
 # install free charts
+
+# install the packages for building node based IOT applications
+bash scripts/install_iot.sh
+
+# clean up after everything is installed
+sudo apt-get -y autoremove

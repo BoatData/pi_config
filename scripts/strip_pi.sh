@@ -82,7 +82,7 @@ poppler-utils"
 
 # Remove packages with confirmation
 for i in $pkgs; do
-	echo apt-get remove --purge $i
+	echo apt-get -y remove --purge $i
 done
 
 
