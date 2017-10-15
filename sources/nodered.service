@@ -7,9 +7,9 @@ Documentation=http://nodered.org/docs/hardware/raspberrypi.html
 
 [Service]
 Type=simple
-# Run as root for access to the GPIO pins
-User=root
-Group=root
+# Run as pi user
+User=pi
+Group=pi
 WorkingDirectory=/home/pi
 Nice=5
 Environment="NODE_OPTIONS=--max_old_space_size=256"
