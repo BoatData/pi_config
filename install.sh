@@ -26,7 +26,13 @@ bash scripts/install_kplex.sh
 # install opencpn
 bash scripts/install_opencpn.sh
 
-# install charts for OpenCPN
+# install free charts for OpenCPN
+
+# install the tools for AIS RTL SDR usb dongle
+bash scripts/install_ais.sh
+
+# and/or install the tools for weather by satellite
+bash scripts/install_weathersat.sh
 
 # install zyGrib
 bash scripts/install_zygrib.sh
@@ -40,10 +46,12 @@ bash pi_config/scripts/install_signalk.sh
 # install vnc
 bash pi_config/install_vnc.sh
 
-# install free charts
-
 # install the packages for building node based IOT applications
 bash scripts/install_iot.sh
+bash scripts/install_devices.sh
+bash scripts/install_node-red.sh
 
 # clean up after everything is installed
 sudo apt-get -y autoremove
+
+echo "reboot to startup everything that was installed"

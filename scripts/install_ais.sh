@@ -28,5 +28,4 @@ sudo cp rtl-ais /usr/local/bin
 cd ${base}/pi_config
 sudo cp sources/blacklist-rtl.conf /etc/modprobe.d/
 
-
 echo "reboot required for ais dongle"

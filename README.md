@@ -130,7 +130,8 @@ Create a directory for the installation, change into the new directory and clone
 the git repo.
 
 ```
-mkdir /home/boatdata
+sudo mkdir /home/boatdata
+sudo chown pi.pi /home/boatdata
 cd /home/boatdata
 git clone https://github.com/BoatData/pi_config
 cd pi_config
@@ -242,6 +243,8 @@ https://www.rtl-sdr.com/setting-up-a-raspberry-pi-based-ais-receiver-with-an-rtl
 
 #### satellite weather
 https://www.rtl-sdr.com/setting-up-an-rtl-sdr-based-aptmeteor-satellite-weather-stations/
+https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/
+https://www.rtl-sdr.com/rtl-sdr-tutorial-decoding-meteor-m2-weather-satellite-images-in-real-time-with-an-rtl-sdr/
 
 #### heel pitch IMU
 #### Barograph, Thermograph and Hygrograph

@@ -1,0 +1,8 @@
+# rule for the lambda board
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015",  SYMLINK+="lambda"
+
+# rules for the ftdi rs422 complus4
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011",  ATTRS{bInterfaceNumber}=="00", SYMLINK+="rs4220"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011",  ATTRS{bInterfaceNumber}=="01", SYMLINK+="rs4221"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011",  ATTRS{bInterfaceNumber}=="02", SYMLINK+="rs4222"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011",  ATTRS{bInterfaceNumber}=="03", SYMLINK+="rs4223"
