@@ -208,6 +208,23 @@ No settings/defaults.json available
 signalk-server running at 0.0.0.0:80
 ```
 
+#### install OpenCPN
+
+Install OpenCPN with
+```
+bash scripts/install_opencpn.sh
+```
+After installation start OpenCPN and add a connection to SignalK NMEA port.
+Open the Connections section of OpenCPN settings and click *Add Connection*.
+Select Network connection radio button
+Protocol: TCP
+Address: 0.0.0.0
+DataPort: enter 10110 (10110 is the assigned port number for NMEA data and
+  signalK provides the NMEA data stream on this port)
+Check Control checksum 
+Input filtering: Select Ignore sentences radio button and leave the list blank
+Output filtering: select Drop sentences radio button and leave the list blank
+
 ## Configuration API
 
 A principle goal of this project is to provide an API so that the Pi can be

@@ -13,5 +13,5 @@ fi
 echo 'installing kplex'
 sudo apt install -y ${base}/tmp/kplex_1.3.4-1_armhf.deb
 mkdir -p ${base}/pi_config/config
-sudo mv /etc/kplex.conf ${base}/pi_config/config/
+sudo rm /etc/kplex.conf 
 sudo ln -s ${base}/pi_config/config/kplex.conf /etc/kplex.conf

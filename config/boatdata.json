@@ -1,0 +1,77 @@
+{
+	"vessel": {
+		"name"	: "BoatData",
+		"uuid"	: "urn:mrn:signalk:uuid:187fca6f-2e1c-409b-a6ed-79a0fa243208",
+
+		"dimensions": {
+			"length": 7,
+			"width": 2.5,
+			"mast": 10,
+			"depthTransducer": 0.5,
+			"keel": 1.5
+		}
+	},
+
+  "pipedProviders": [{
+    "id": "jsonFromUdp",
+    "pipeElements": [
+       {
+         "type": "providers/udp",
+         "options": {
+           "port": 7777
+         },
+         "optionMappings": [
+           {
+             "fromAppProperty": "argv.udpport",
+             "toOption": "port"
+           }
+         ]
+       },
+       {
+         "type": "providers/liner"
+       },
+       {
+         "type": "providers/from_json"
+       }
+    ]
+  },
+  {
+    "id": "nmeaFromFile",
+    "pipeElements": [
+       {
+         "type": "providers/filestream",
+         "options": {
+           "filename": "samples/plaka.log"
+         },
+         "optionMappings": [
+           {
+             "fromAppProperty": "argv.nmeafilename",
+             "toOption": "filename"
+           }
+         ]
+       },
+       {
+         "type": "providers/throttle",
+         "options": {
+            "rate": 500
+         }
+       },
+       {
+         "type": "providers/liner"
+       },
+       {
+          "type": "providers/nmea0183-signalk",
+          "optionMappings": [
+            {
+             "fromAppProperty": "selfId",
+             "toOption": "selfId"
+            },
+            {
+             "fromAppProperty": "selfType",
+             "toOption": "selfType"
+            }
+          ]
+       }
+    ]
+  }]
+}
