@@ -2,6 +2,11 @@
 
 bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
 
+# copy node-red service which runs as root for GPIO access
+base=/home/boatdata
+cd ${base}
+sudo cp pi_config/sources/nodered.service /lib/systemd/system/
+
 cd ~/.node-red
 
 npm install --save johnny-five node-red-contrib-gpio raspi-io node-red-dashboard node-red-contrib-modbus
