@@ -21,7 +21,8 @@ bash scripts/install_essential.sh
 # use raspi_config to enable stuff e.g. ssh
 
 # install kplex multiplexer
-bash scripts/install_kplex.sh
+# this may not be needed when using node-red as the multiplexer
+# bash scripts/install_kplex.sh
 
 # install opencpn
 bash scripts/install_opencpn.sh
