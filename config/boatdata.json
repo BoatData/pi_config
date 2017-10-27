@@ -35,6 +35,31 @@
        }
     ]
   },
+	{
+    "id": "nmeaFromTCP",
+    "pipeElements": [
+       {
+         "type": "providers/tcp",
+         "options": {
+           "host": "127.0.0.1",
+           "port": "10115"
+         }
+       },
+       {
+          "type": "providers/nmea0183-signalk",
+          "optionMappings": [
+            {
+             "fromAppProperty": "selfId",
+             "toOption": "selfId"
+            },
+            {
+             "fromAppProperty": "selfType",
+             "toOption": "selfType"
+            }
+          ]
+       }
+    ]
+  },
   {
     "id": "nmeaFromFile",
     "pipeElements": [
