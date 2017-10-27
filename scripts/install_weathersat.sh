@@ -27,3 +27,7 @@ chmod +x !$/*.sh
 # http://metsat.gogan.org/ant_qha.htm
 # https://www.youtube.com/watch?v=CrFoA-aJZng
 # http://jcoppens.com/ant/qfh/calc.en.php
+# http://www.g4ilo.com/qfh.html
+# https://www.youtube.com/watch?v=KU75FSA6o2M
+# www.aribra.it/autocostruzione/qfh/qfh.pdf
+# http://www.gregorystrike.com/2010/05/16/quadrifilar-helix-antenna-137-mhz/
