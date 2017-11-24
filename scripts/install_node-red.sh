@@ -7,7 +7,7 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/
 #cd ${base}
 #sudo cp pi_config/sources/nodered.service /lib/systemd/system/
 
-cd ~/.node-red && npm install --save johnny-five node-red-dashboard node-red-node-serialport
+cd ~/.node-red && npm install --save node-red-dashboard node-red-node-serialport
 
 sudo systemctl enable nodered.service
 

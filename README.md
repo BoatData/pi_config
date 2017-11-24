@@ -160,12 +160,11 @@ bash scripts/strip_pi.sh
 ```
 
 #### install essential things
-There are a few scripts that are essential and should be installed, everything
+There are a 2 scripts that are essential and should be installed, everything
 else is optional.
 
 ```
 bash scripts/install_essential.sh
-bash scripts/install_kplex.sh
 bash pi_config/scripts/install_signalk.sh
 ```
 
@@ -199,7 +198,7 @@ name and is located in the bin folder of signalk-server-node e.g.  OceanWave wil
 
 ```
 cd /home/boatdata/signalk-server-node
-sudo bin/OceanWave (or whatever your boat name is)
+sudo bin/boatdata (or whatever your boat name is)
 ```
 
 The output should be
@@ -221,7 +220,7 @@ Protocol: TCP
 Address: 0.0.0.0
 DataPort: enter 10110 (10110 is the assigned port number for NMEA data and
   signalK provides the NMEA data stream on this port)
-Check Control checksum 
+Check Control checksum
 Input filtering: Select Ignore sentences radio button and leave the list blank
 Output filtering: select Drop sentences radio button and leave the list blank
 
@@ -233,6 +232,9 @@ to that provided by the openplotter project but using Node.JS as the programming
 language rather than python and using the SignalK server as the API server.
 
 #### configure kplex and signalk
+```
+bash scripts/install_kplex.sh
+```
 
 #### NMEA 0183 Multiplexer
 
@@ -250,18 +252,44 @@ e.g. with https://github.com/paulvarache/node-gpio
 
 Configure the Pi as a Wifi access point so we can share data
 (NMEA 0183, Signal K, remote desktop, Internet) with laptops, tablets and phones.
+This script configures a wifi access point with the SSID of SmartBoat and a password
+of SmartBoatNetwork
+```
+bash scripts/install_wifi_ap.sh
+```
 
 #### Data filter
 
 Check the data traffic to avoid conflicts and overlaps between sources
 
 #### SDR-AIS
-https://www.rtl-sdr.com/setting-up-a-raspberry-pi-based-ais-receiver-with-an-rtl-sdr/
+
+Install programs to get AIS data via a USB SDR-RTL dongle
+```
+bash scripts/install_ais.sh
+```
+see: [RTL-SDR AIS reciever](https://www.rtl-sdr.com/setting-up-a-raspberry-pi-based-ais-receiver-with-an-rtl-sdr/)
+
 
 #### satellite weather
-https://www.rtl-sdr.com/setting-up-an-rtl-sdr-based-aptmeteor-satellite-weather-stations/
-https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/
-https://www.rtl-sdr.com/rtl-sdr-tutorial-decoding-meteor-m2-weather-satellite-images-in-real-time-with-an-rtl-sdr/
+
+You will need a RTL-SDR USB dongle and an appropriate (e.g. QFA) antenna.
+```
+bash scripts/install_weathersat.sh
+```
+
+see:
+[Satellite Weather Stations](https://www.rtl-sdr.com/setting-up-an-rtl-sdr-based-aptmeteor-satellite-weather-stations/)
+[Weather Satellite Images](https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/)
+[Decoding Meteor M2 weather satellite images](https://www.rtl-sdr.com/rtl-sdr-tutorial-decoding-meteor-m2-weather-satellite-images-in-real-time-with-an-rtl-sdr/)
+
+#### Zygrib
+
+Install Zygrib
+TODO: get zygrib data for location
+```
+bash scripts/install_zygrib.sh
+```
 
 #### heel pitch IMU
 #### Barograph, Thermograph and Hygrograph
@@ -298,7 +326,6 @@ Calculate the rate the ship is turning.
 
 Publish data on boatdata.net, SMS, Twitter or send it by email.
 
-#### get zygrib data for location
 
 #### get google earth maps for location
 

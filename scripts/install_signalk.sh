@@ -14,7 +14,6 @@ sudo apt-get install -y libnss-mdns avahi-utils libavahi-compat-libdnssd-dev
 
 (cd signalk-server-node && npm install && npm install mnds && sudo bash ./rpi-setup.sh)
 
-
 sudo systemctl start signalk.service
 sudo systemctl start signalk.socket
 

@@ -1,0 +1,23 @@
+{
+  "id": "jsonFromUdp",
+  "pipeElements": [
+     {
+       "type": "providers/udp",
+       "options": {
+         "port": 10114
+       },
+       "optionMappings": [
+         {
+           "fromAppProperty": "argv.udpport",
+           "toOption": "port"
+         }
+       ]
+     },
+     {
+       "type": "providers/liner"
+     },
+     {
+       "type": "providers/from_json"
+     }
+  ]
+}
