@@ -2,7 +2,7 @@
 
 # remove old versions of nodejs and npm and install newer versions
 # install some stuff we do need
-sudo apt-get install -y git build-essential
+sudo apt-get install -y git build-essential p7zip
 
 # install later versions of node and npm
 sudo apt-get remove -y npm nodejs

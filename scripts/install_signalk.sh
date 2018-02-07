@@ -2,7 +2,7 @@
 # setup signalk
 base=/home/boatdata
 mkdir -p ${base}/tmp
-cd ${base}
+cd ${base}/tmp
 
 if [ -d "boatdata-signalk" ]; then
   (cd signalk-server-node && git pull)
@@ -17,7 +17,7 @@ sudo apt-get install -y libnss-mdns avahi-utils libavahi-compat-libdnssd-dev
 sudo systemctl start signalk.service
 sudo systemctl start signalk.socket
 
-cd ${base}
+cd ${base}/tmp
 sudo apt-get install -y xsltproc
 git clone git://github.com/canboat/canboat
 cd canboat
