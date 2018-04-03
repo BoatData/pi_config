@@ -64,7 +64,7 @@ PBF_FILE="/home/${OSM_USER}/OpenStreetMap/${PBF_URL##*/}"
 UPDATE_URL="$(echo ${PBF_URL} | sed 's/latest.osm.pbf/updates/')"
 if [[ ${PBF_URL} =~ "planet" ]]; then
     # For planet file, hard code the update url
-    UPDATE_URL = "http://planet.openstreetmap.org/replication/day"
+    UPDATE_URL = "https://planet.openstreetmap.org/replication/day"
 fi
 NP=$(grep -c 'model name' /proc/cpuinfo)
 
