@@ -13,7 +13,7 @@ sudo apt-get upgrade
 # bash scripts/install_samba.sh
 
 # remove a whole load of stuff we ain't gonna need
-bash scripts/strip_pi.sh
+#bash scripts/strip_pi.sh
 
 # install essential things
 bash scripts/install_essential.sh
@@ -48,7 +48,7 @@ bash pi_config/scripts/install_signalk.sh
 bash pi_config/install_vnc.sh
 
 # install the packages for building node based IOT applications
-bash scripts/install_iot.sh
+#bash scripts/install_iot.sh
 bash scripts/install_devices.sh
 bash scripts/install_node-red.sh
 
